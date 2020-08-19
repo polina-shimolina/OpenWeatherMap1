@@ -24,7 +24,6 @@ namespace WindowsFormsApp3
         public void Search()
         { 
             HttpWebResponse response = (HttpWebResponse)request.GetResponse();
-            MessageBox.Show(response.StatusDescription);
             Stream dataStream = response.GetResponseStream();
             StreamReader reader = new StreamReader(dataStream);
             string responseFromServer = reader.ReadToEnd();
@@ -32,7 +31,7 @@ namespace WindowsFormsApp3
             dataStream.Close();
             response.Close();
             weather = JsonConvert.DeserializeObject<Weather>(responseFromServer);
-            result = $" t in {weather.name}: {weather.main.temp} C";
+            result = $" temperature in {weather.name}: {weather.main.temp} °C";
             MessageBox.Show(result);
         }
     }
