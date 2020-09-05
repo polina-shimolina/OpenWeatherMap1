@@ -12,46 +12,28 @@ namespace WindowsFormsApp3
 {
     public partial class Form1 : Form
     {
-        public string url;
+        public string url=string.Empty;
+        Class weath;
         public Form1()
         {
             InitializeComponent();
+            weath = new Class();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            
-            switch (comboBox1.SelectedIndex)
-            {
-                case 0:
-                    {
 
-                        url = "http://api.openweathermap.org/data/2.5/weather?q=Moscow&appid=ecc0ea77210f8032ef8804a80a9f40f0&units=metric";
-                        break;
-                    }
-                case 1:
-                    {
-                        url = "http://api.openweathermap.org/data/2.5/weather?q=London&appid=ecc0ea77210f8032ef8804a80a9f40f0&units=metric";
-                        break;
-                    }
-                case 2:
-                    {
-                        url = "http://api.openweathermap.org/data/2.5/weather?q=Washington&appid=ecc0ea77210f8032ef8804a80a9f40f0&units=metric";
-                        break;
-                    }
-                case 3:
-                    {
-                        url = "http://api.openweathermap.org/data/2.5/weather?q=Minsk&appid=ecc0ea77210f8032ef8804a80a9f40f0&units=metric";
-                        break;
-                    }
-                case 4:
-                    {
-                        url = "http://api.openweathermap.org/data/2.5/weather?q=Kiev&appid=ecc0ea77210f8032ef8804a80a9f40f0&units=metric";
-                        break;
-                    }
-            }
-            Class weath = new Class(url);
+
+            url += "http://api.openweathermap.org/data/2.5/weather?q=";
+            url += comboBox1.SelectedItem.ToString();
+            url += "&appid = ecc0ea77210f8032ef8804a80a9f40f0 & units = metric";
+            
+            weath.ChangeRequest(url);
+               //MessageBox.Show(comboBox1.SelectedItem.ToString());  
             weath.Search();
+              
+            weath.MessageShow();
+           
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)

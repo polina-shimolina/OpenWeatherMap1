@@ -17,9 +17,13 @@ namespace WindowsFormsApp3
         public string result;
         WebRequest request;
         Weather weather;
-        public Class(string u)
+        public Class()
         {
-            request = WebRequest.Create(u);
+            
+        }
+        public void ChangeRequest(string input)
+        {
+            request = WebRequest.Create(input);
         }
         public void Search()
         { 
@@ -32,7 +36,10 @@ namespace WindowsFormsApp3
             response.Close();
             weather = JsonConvert.DeserializeObject<Weather>(responseFromServer);
             result = $" temperature in {weather.name}: {weather.main.temp} °C";
-            MessageBox.Show(result);
+        }
+        public void MessageShow()
+        {
+           MessageBox.Show(result);
         }
     }
 }
