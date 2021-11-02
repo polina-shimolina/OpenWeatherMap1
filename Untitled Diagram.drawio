@@ -1,4 +1,4 @@
-<mxfile host="app.diagrams.net" modified="2021-11-02T04:18:25.221Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="Z4GRw2PXgIGXumnt5p2W" version="15.6.5" type="github">
+<mxfile host="app.diagrams.net" modified="2021-11-02T04:18:52.340Z" agent="5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/95.0.4638.54 Safari/537.36" etag="ASScEbkBO4xvtQNF44F2" version="15.6.5" type="github">
   <diagram id="pQ924asUckL354suc2qv" name="Page-1">
     <mxGraphModel dx="1896" dy="781" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
@@ -196,7 +196,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="_1jqZx963ddc79pBxcca-80" value="Выполнена на склад" style="rhombus;whiteSpace=wrap;html=1;" vertex="1" parent="1">
-          <mxGeometry x="480" y="330" width="180" height="80" as="geometry" />
+          <mxGeometry x="480" y="320" width="180" height="80" as="geometry" />
         </mxCell>
         <mxCell id="_1jqZx963ddc79pBxcca-130" value="" style="group" vertex="1" connectable="0" parent="1">
           <mxGeometry x="1000" y="583" width="290" height="260" as="geometry" />
